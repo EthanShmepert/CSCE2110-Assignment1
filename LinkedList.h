@@ -10,7 +10,7 @@ class linkedList{
         linkedList();
         void insertAt(node &nodeToAdd, int index);
         void insertAfter(node &nodeToAdd, node &prevNode);
-        void append(node& nodeToAdd);
+        void append(int value);
 
         void print();
 

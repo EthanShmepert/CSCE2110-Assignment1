@@ -43,6 +43,15 @@ int linkedList::getLength(){
     return length;
 }
 
+void linkedList::append(int value){
+    node* currNode = head;
+    while (currNode->getNext() != nullptr)
+    {      
+        currNode = currNode->getNext();
+    }
+    currNode->setNext(node(value));
+}
+
 int linkedList::getIndex(int value){
     node* currNode = head;
     int index = 0;
