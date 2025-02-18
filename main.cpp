@@ -21,6 +21,10 @@ void printTitle(){
     cout<<"  \\/_____/   \\/_/   \\/_/ \\/_/   \\/_/\\/_/   \\/_____/   \\/____/      \\/_____/   \\/_/   \\/_____/     \\/_/ "<<endl;
     
 }
+
+void action(int choice, linkedList LL){
+    
+}
 int main(){
     linkedList myList;
     int length;
@@ -28,12 +32,22 @@ int main(){
     cout<<"Linked List Creator made by Ethan Shepherd | 2025 | CSCE2110"<<endl<<endl;
     cout<<"Enter length of list: ";
     cin>>length;
-
+    cout<<"---------------------<<endl";
     int temp;
     for(int i = 0; i < length; i++){
+        cout<<"Enter number "<<i+1<<": ";
         cin>>temp;
         myList.append(temp);
     }
+    cout<<endl;
+
+    int choice = -1;
+    while(choice != 5){
+        cout<<"Select: ";
+        cin>>choice;
+    }
+
+    printMenu();
     
     return 0;
 }

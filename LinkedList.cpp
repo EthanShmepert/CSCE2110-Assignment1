@@ -1,5 +1,5 @@
 #include <iostream>
-#include <LinkedList.h>
+#include "LinkedList.h"
 using namespace std;
 
 linkedList::linkedList(){
@@ -39,17 +39,24 @@ int linkedList::getLength(){
     int length = 0;
     while(currNode->getNext() != nullptr){
         length++;
+        currNode = currNode->getNext();
     }
     return length;
 }
 
 void linkedList::append(int value){
+    node* newNode = new node(value);
+    if(head == nullptr){
+        head = newNode;
+        return;
+    }
+
     node* currNode = head;
     while (currNode->getNext() != nullptr)
     {      
         currNode = currNode->getNext();
     }
-    currNode->setNext(node(value));
+    currNode->setNext(*newNode);
 }
 
 int linkedList::getIndex(int value){
