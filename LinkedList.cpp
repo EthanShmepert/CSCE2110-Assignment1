@@ -43,7 +43,29 @@ int linkedList::getLength(){
     return length;
 }
 
+int linkedList::getIndex(int value){
+    node* currNode = head;
+    int index = 0;
+    while (currNode != nullptr)
+    {
+        if(currNode->getValue() == value){
+            return index;
+        }
+        index += 1;
+        currNode = currNode->getNext();
+
+    }
+
+    return -1;
+    
+
+}
+
 void linkedList::print(){
+    if(getLength() == 0){
+        cout<<"empty"<<endl;
+        return;
+    }
     node* currNode = head;
     for(int i = 0; i < getLength()-1; i++){
         cout<< currNode->getValue() << " ";
