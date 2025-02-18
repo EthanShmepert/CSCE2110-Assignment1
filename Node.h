@@ -8,6 +8,9 @@ class node{
         node* getNext();
         void setNext(node &newNext);
 
+        int getValue();
+        void setValue(int newValue);
+
     private:
         int value;
         node* nextNode;

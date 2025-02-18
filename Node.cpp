@@ -18,3 +18,11 @@ node* node::getNext(){
 void node::setNext(node &newNext){
     nextNode = &newNext;
 }
+
+int node::getValue(){
+    return value;
+}
+
+void node::setValue(int newValue){
+    value = newValue;
+}

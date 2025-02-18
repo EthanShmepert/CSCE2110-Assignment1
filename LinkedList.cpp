@@ -42,3 +42,11 @@ int linkedList::getLength(){
     }
     return length;
 }
+
+void linkedList::print(){
+    node* currNode = head;
+    for(int i = 0; i < getLength()-1; i++){
+        cout<< currNode->getValue() << " ";
+    }
+    cout<<endl;
+}

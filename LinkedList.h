@@ -11,7 +11,9 @@ class linkedList{
         void insertAt(node &nodeToAdd, int index);
         void insertAfter(node &nodeToAdd, node &prevNode);
         void append(node& nodeToAdd);
-        
+
+        void print();
+
         int getIndex(int value);
         int getLength();
 
