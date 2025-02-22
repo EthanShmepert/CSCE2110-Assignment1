@@ -8,7 +8,7 @@ class linkedList{
 
     public:
         linkedList();
-        void insertAt(node &nodeToAdd, int index);
+        void insertAt(int value, int index);
         void insertAfter(node &nodeToAdd, node &prevNode);
         void append(int value);
 
